@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@plugin "tailwindcss-animate";
+
+:root {
+  --blue-10: #EBFAFF;
+  --blue-20: #E5F7FF;
+  --blue-30: #CBE5F0;
+  --blue-40: #BCDBE7;
+  --blue-50: #80C1D3;
+  --blue-60: #4D8DAB;
+  --blue-70: #476B93;
+  --blue-80: #3F607D;
+  --blue-90: #2A4B65;
+  --blue-100: #243146;
+  --blue-150: #052137;
+  --gray-10: #F0F0F0;
+  --gray-20: #E5E5E5;
+  --gray-40: #CCC;
+  --gray-60: #999;
+  --gray-80: #666;
+  --white: #fff;
+  --warning: #FF6262;
+  --error-dark: #3B1D1D;
+  --warning-dark: #4B4635;
+  --warning-light: #FFD084;
+}
+
+@theme inline {
+  --color-*: initial;
+  --color-blue-10: var(--blue-10);
+  --color-blue-20: var(--blue-20);
+  --color-blue-30: var(--blue-30);
+  --color-blue-40: var(--blue-40);
+  --color-blue-50: var(--blue-50);
+  --color-blue-60: var(--blue-60);
+  --color-blue-70: var(--blue-70);
+  --color-blue-80: var(--blue-80);
+  --color-blue-90: var(--blue-90);
+  --color-blue-100: var(--blue-100);
+  --color-blue-150: var(--blue-150);
+  --color-gray-10: var(--gray-10);
+  --color-gray-20: var(--gray-20);
+  --color-gray-40: var(--gray-40);
+  --color-gray-60: var(--gray-60);
+  --color-gray-80: var(--gray-80);
+
+  --color-gray-20: var(--gray-20);
+
+  --color-white: var(--white);
+  --color-warning: var(--warning);
+  --color-warning-light: var(--warning-light);
+  --color-error-dark: var(--error-dark);
+  --color-warning-dark: var(--warning-dark);
+  /* Border radius */
+  --radius-corner-1: 5px;
+  --radius-corner-2: 10px;
+  --radius-corner-3: 15px;
+  --radius-corner-4: 20px;
+
+  /* Font */
+  --font-murecho: var(--font-murecho);
+  --font-inter: var(--font-inter);
+  --font-figtree: var(--font-figtree);
+}
+
+@layer base {
+  body {
+    @apply bg-blue-150 text-blue-10;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+
+  * {
+    &::-webkit-scrollbar {
+      width: 1.5px;
+      height: 1.5px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: var(--blue-20);
+    }
+  }
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    &::-webkit-scrollbar {
+      width: 0;
+      height: 0;
+    }
+  }
+  .break-word-all-child > * {
+    word-break: break-word;
+  }
+}
+
+.box-shadow-medium {
+  box-shadow: 0px -1px 1px -0.5px rgba(51, 51, 51, 0.06) inset, 0px 0px 0px 1px rgba(51, 51, 51, 0.04), 0px 1px 1px 0.5px rgba(51, 51, 51, 0.04), 0px 3px 3px -1.5px rgba(51, 51, 51, 0.02), 0px 6px 6px -3px rgba(51, 51, 51, 0.04), 0px 12px 12px -6px rgba(51, 51, 51, 0.04), 0px 24px 24px -12px rgba(51, 51, 51, 0.04), 0px 48px 48px -24px rgba(51, 51, 51, 0.04);
+}

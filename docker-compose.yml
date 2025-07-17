@@ -1,0 +1,11 @@
+services:
+  aptos-ai-agent-fe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      network: host
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      - NODE_ENV=production
+    restart: always
